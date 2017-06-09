@@ -10,6 +10,7 @@
 (defpackage #:arrayfire-ffi.functions)
 
 (defpackage #:arrayfire
+  (:nicknames #:af)
   (:use #:cl)
   ; as these will probably pose a small issue...
   (:shadow ; Arithmatic Ops

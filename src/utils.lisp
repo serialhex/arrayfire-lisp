@@ -20,3 +20,22 @@
           ((5 10) "Buzz")
           (otherwise n))
         (fizzbuzz-helper (+ 1 n) x))))
+
+
+(defparameter *acc-syms*
+  (let (symbols)
+    (do-external-symbols (s (find-package "ARRAYFIRE-FFI.ACCESSORS"))
+      (push s symbols))
+    symbols))
+
+(defparameter *fun-syms*
+  (let (symbols)
+    (do-external-symbols (s (find-package "ARRAYFIRE-FFI.FUNCTIONS"))
+      (push s symbols))
+    symbols))
+
+(defparameter *af-syms*
+  (let (symbols)
+    (do-external-symbols (s (find-package "ARRAYFIRE-FFI"))
+      (push s symbols))
+    symbols))
