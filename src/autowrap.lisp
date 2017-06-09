@@ -3,13 +3,13 @@
 ;;;; Copyright (c) 2016 ArrayFire
 ;;;; Copyright (c) 2016 Justin Patera <justin.patera@level3inspection.com>
 
-(in-package :arrayfire-lisp)
+(in-package :arrayfire)
 
 (autowrap:c-include
- '(arrayfire autowrap-spec "ArrayFire.h")
+ '(arrayfire-lisp autowrap-spec "ArrayFire.h")
   :accessor-package :arrayfire-ffi.accessors
   :function-package :arrayfire-ffi.functions
-  :spec-path '(arrayfire autowrap-spec)
+  :spec-path '(arrayfire-lisp autowrap-spec)
   ; I may need to exclude, ot include other sources... IDK yet.
   :exclude-sources ("/usr/local/lib/clang/([^/]*)/include/(?!stddef.h)"
                     "/usr/include/"
